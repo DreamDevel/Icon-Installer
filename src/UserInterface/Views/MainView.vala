@@ -15,7 +15,6 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  *  Authored by: George Sofianos <georgesofianosgr@gmail.com>
- *
  */
 
 using Gee;

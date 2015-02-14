@@ -15,9 +15,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  *  Authored by: George Sofianos <georgesofianosgr@gmail.com>
- *
  */
-
 
 public class IconInstaller.Widgets.ViewStack : Gtk.Stack {
 

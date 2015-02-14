@@ -1,5 +1,5 @@
 /*-
- *  Copyright (c) 2014 George Sofianos
+ *  Copyright (c) 2015 George Sofianos
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -15,9 +15,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  *  Authored by: George Sofianos <georgesofianosgr@gmail.com>
- *
  */
-
 
 public class IconInstaller.Menus.ApplicationMenu : Gtk.Menu {
 
