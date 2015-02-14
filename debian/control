@@ -1,0 +1,17 @@
+Source: iconinstaller
+Section: system
+Priority: extra
+Maintainer: George Sofianos <georgesofianosgr@gmail.com>
+Build-Depends: cmake (>= 2.8),
+               debhelper (>= 8.0.0),
+               valac-0.24 | valac (>= 0.24),
+               libgtk-3-dev,
+               libgranite-dev,
+               libgee-dev,
+               libnotify-dev
+Standards-Version: 3.9.3
+
+Package: iconinstaller
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Easily install .icns .icon and png icons to elementary OS

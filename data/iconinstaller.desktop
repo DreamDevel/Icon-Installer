@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Icon Installer
+GenericName=Icon Installer
+Comment=Install icons easily
+Categories=System;GNOME;GTK;
+Exec=iconinstaller
+Icon=iconinstaller
+Terminal=false
+Type=Application
+Version=1.0
+X-GNOME-Gettext-Domain=iconinstaller
+X-GNOME-Keywords=Icon;Installer;
+X-AppInstall-Keywords=Icon;Installer;
