@@ -1,12 +1,13 @@
 # Icon Installer
-**Easily install .icns .icon and png icons to elementary os** 
+**Easily install .icns .icon and png icons to elementary OS** 
 
  ```
 Project is under development. Please report bugs or create pull requests after the version 1.0 is released. 
 ```
 
-Visit our webpage for more info : http://www.dreamdevel.com/apps/iconinstaller
-```Note: Webpage under construction```
+Visit our web page for more info : http://www.dreamdevel.com/apps/iconinstaller 
+
+```Note: Web page under construction```
 
 ##Install Build Dependencies
 
