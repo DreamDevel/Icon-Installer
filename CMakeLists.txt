@@ -52,11 +52,13 @@ vala_precompile(VALA_C ${EXEC_NAME}
     src/UserInterface/Widgets/ViewStack.vala
     src/UserInterface/Widgets/TrueFalseBox.vala
 
+    src/UserInterface/Views/SuccessView.vala
     src/UserInterface/Views/WelcomeView.vala
     src/UserInterface/Views/MainView.vala
 
     src/Core/FileSystem.vala
     src/Core/IconPackDecoder.vala
+    src/Core/IconPackInstaller.vala
 
     src/Models/Icon.vala
     src/Models/IconPack.vala

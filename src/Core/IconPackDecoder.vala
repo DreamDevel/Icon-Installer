@@ -39,6 +39,7 @@ public class IconInstaller.Core.IconPackDecoder {
             var type = working_file.query_info ("standard::*",FileQueryInfoFlags.NONE).get_content_type ();
             if (type == "image/x-icns") {
                 var icon_pack = create_icon_pack_for_icns_file ();
+                App.current_icon_pack = icon_pack;
                 decode_finished (icon_pack);
             }
 
@@ -50,6 +51,7 @@ public class IconInstaller.Core.IconPackDecoder {
                 stdout.printf ("Path is categorized\n");
                 // TODO check for errors retrieve icon pack name
                 var icon_pack = create_icon_pack_for_categorized_folder ();
+                App.current_icon_pack = icon_pack;
                 decode_finished (icon_pack);
             } else {
                 // maybe folder is not categorized TODO

@@ -46,7 +46,7 @@ public class IconInstaller.Views.WelcomeView : Granite.Widgets.Welcome {
     }
 
     private void handle_welcome_menu_click (int index) {
-        if (index == 1) {
+        if (index == 0) {
            var file = App.open_file ();
            if (file != null) {
                App.decoder.decode (file.get_path ());

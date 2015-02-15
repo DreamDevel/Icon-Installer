@@ -55,18 +55,14 @@ using Gee;
     }
 
     private void create_icon_preview () {
-        // TODO load 64px or higher to 64px gtk image
         icon_preview = new Gtk.Image ();
         icon_preview.margin_bottom = 6;
-        set_icon ("/home/george/Pictures/twitter/64x64/twitter.png"); // TODO remove it temporary
     }
 
     private void create_name_entry () {
         name_entry = new Gtk.Entry ();
-        name_entry.can_focus = false;
         name_entry.margin_left = 80;
         name_entry.margin_right = 80;
-        name_entry.text = "twitter"; // TODO temporary , remove it
         name_entry.set_alignment ((float)0.5);
     }
 
@@ -106,16 +102,21 @@ using Gee;
     private void connect_handlers_to_internal_signals () {
         install_button.clicked.connect (handle_install_button_clicked);
         cancel_button.clicked.connect (handle_cancel_button_clicked);
+        name_entry.changed.connect (handle_name_entry_text_changed);
     }
 
     private void handle_install_button_clicked () {
-
+        App.installer.install (App.current_icon_pack);
     }
 
     private void handle_cancel_button_clicked () {
         reset ();
         App.empty_tmp_dir ();
         App.main_window.view_stack.change_to_view_with_name("welcome");
+    }
+
+    private void handle_name_entry_text_changed () {
+        App.current_icon_pack.name = name_entry.text;
     }
 
     private void connect_handlers_to_external_signals () {

@@ -23,6 +23,8 @@ class IconInstaller.App : Granite.Application {
     public static IconInstaller.Windows.MainWindow main_window {get;private set;default = null;}
     public static IconInstaller.App instance;
     public static IconInstaller.Core.IconPackDecoder decoder;
+    public static IconInstaller.Core.IconPackInstaller installer;
+    public static IconInstaller.Models.IconPack current_icon_pack;
     private static Gtk.FileChooserDialog open_file_dialog;
 
     public signal void ui_build_finished ();
@@ -74,6 +76,7 @@ class IconInstaller.App : Granite.Application {
     private void create_core_objects () {
         //Notify.init (this.program_name);
         decoder = new Core.IconPackDecoder ();
+        installer = new Core.IconPackInstaller ();
     }
 
     private void create_user_interface () {

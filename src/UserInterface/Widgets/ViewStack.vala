@@ -21,10 +21,10 @@ public class IconInstaller.Widgets.ViewStack : Gtk.Stack {
 
 	public IconInstaller.Views.WelcomeView welcome_view;
     public IconInstaller.Views.MainView main_view;
+    public IconInstaller.Views.SuccessView success_view;
 
     public ViewStack () {
         build_interface ();
-        connect_handlers_to_external_signals ();
     }
 
     private void build_interface () {
@@ -41,19 +41,37 @@ public class IconInstaller.Widgets.ViewStack : Gtk.Stack {
     private void create_views () {
     	welcome_view = new IconInstaller.Views.WelcomeView ();
     	main_view = new IconInstaller.Views.MainView ();
+        success_view = new IconInstaller.Views.SuccessView ();
     }
 
     private void append_views_to_stack () {
     	add_named (welcome_view,"welcome");
     	add_named (main_view,"main_view");
-    }
-
-    private void connect_handlers_to_external_signals () {
-
+        add_named (success_view,"success_view");
     }
 
     public void change_to_view_with_name (string view_name) {
-    	set_visible_child_name (view_name);
+        assign_animation_for_view (view_name);
+        set_visible_child_name (view_name);
+    }
+
+    public void assign_animation_for_view (string view_name) {
+        Gtk.StackTransitionType transition_type = Gtk.StackTransitionType.NONE;
+        switch (visible_child_name) {
+            case "welcome":
+               transition_type = Gtk.StackTransitionType.SLIDE_LEFT;
+               break;
+            case "success_view":
+            case "failure_view":
+                transition_type = Gtk.StackTransitionType.SLIDE_RIGHT;
+                break;
+            case "main_view":
+                transition_type = (view_name == "welcome") ?
+                Gtk.StackTransitionType.SLIDE_RIGHT : Gtk.StackTransitionType.SLIDE_LEFT;
+                break;
+        }
+
+        set_transition_type (transition_type);
     }
 
 
