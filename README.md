@@ -1,6 +1,8 @@
 # Icon Installer
 **Easily install .icns .icon and png icons to elementary OS** 
 
+![](http://i.imgur.com/2QeH6Ox.png)
+
  ```
 Project is under development. Please report bugs or create pull requests after the version 1.0 is released. 
 ```
