@@ -7,7 +7,7 @@ Build-Depends: cmake (>= 2.8),
                valac-0.24 | valac (>= 0.24),
                libgtk-3-dev,
                libgranite-dev,
-               libgee-dev,
+               libgee-0.8-dev,
                libnotify-dev
 Standards-Version: 3.9.3
 
